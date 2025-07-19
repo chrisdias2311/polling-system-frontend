@@ -1,0 +1,151 @@
+  .container {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #f9fafb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  
+  .content {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 0 32px;
+  }
+  
+  .badge {
+    background-color: #7c3aed;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+  }
+  
+  .heading-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .main-heading {
+    font-size: 36px;
+    font-weight: bold;
+    color: #111827;
+    margin: 0;
+    line-height: 1.2;
+  }
+  
+  .subtitle {
+    color: #6b7280;
+    font-size: 18px;
+    margin: 0;
+    line-height: 1.5;
+  }
+  
+  .cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  
+  .card {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 24px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+    background-color: white;
+    width: 250px;
+    flex-shrink: 0;
+  }
+  
+  .card:hover {
+    border-color: #d1d5db;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card.selected {
+    border: 2px solid #3b82f6;
+    background-color: #eff6ff;
+  }
+  
+  .card.selected:hover {
+    border-color: #3b82f6;
+  }
+  
+  .card-content {
+    padding: 0;
+  }
+  
+  .card-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0 0 12px 0;
+  }
+  
+  .card-description {
+    color: #6b7280;
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.5;
+  }
+  
+  .button-container {
+    padding-top: 16px;
+  }
+  
+  .continue-button {
+    background-color: #7c3aed;
+    color: white;
+    padding: 12px 32px;
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    min-width: 120px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .continue-button:hover:not(:disabled) {
+    background-color: #6d28d9;
+  }
+  
+  .continue-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .main-heading {
+      font-size: 28px;
+    }
+  
+    .subtitle {
+      font-size: 16px;
+    }
+  
+    .cards-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .content {
+      max-width: 100%;
+      gap: 24px;
+    }
+  }
+  

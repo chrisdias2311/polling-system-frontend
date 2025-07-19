@@ -1,0 +1,170 @@
+.student-loader-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f9fafb;
+    box-sizing: border-box;
+}
+
+.loader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    text-align: center;
+}
+
+.badge {
+    background-color: #7c3aed;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.spinner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner {
+    width: 48px;
+    height: 48px;
+    border: 4px solid #e5e7eb;
+    border-top: 4px solid #7c3aed;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-text {
+    font-size: 18px;
+    font-weight: 500;
+    color: #374151;
+    margin: 0;
+    max-width: 400px;
+}
+
+.chat-toggle {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 56px;
+    height: 56px;
+    background: #3b82f6;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.chat-toggle:hover {
+    background: #2563eb;
+    transform: scale(1.05);
+}
+
+.chat-toggle svg {
+    width: 24px;
+    height: 24px;
+    color: white;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #10b981;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.waiting-info {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin-top: 24px;
+}
+
+.info-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0 0 8px 0;
+}
+
+.info-text {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .loader-content {
+        gap: 24px;
+        padding: 0 16px;
+    }
+
+    .loading-text {
+        font-size: 16px;
+    }
+
+    .waiting-info {
+        margin: 16px;
+        padding: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .loading-text {
+        font-size: 14px;
+    }
+
+    .spinner {
+        width: 40px;
+        height: 40px;
+        border-width: 3px;
+    }
+}

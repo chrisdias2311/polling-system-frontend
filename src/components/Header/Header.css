@@ -1,0 +1,30 @@
+.starter-header {
+    margin-bottom: 32px;
+}
+
+.badge {
+    background-color: #7c3aed;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.header-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #111827;
+    margin: 0 0 8px 0;
+    line-height: 1.2;
+}
+
+.header-subtitle {
+    color: #6b7280;
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.5;
+    max-width: 600px;
+}
