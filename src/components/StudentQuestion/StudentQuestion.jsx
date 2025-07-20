@@ -16,10 +16,14 @@ const StudentQuestion = ({ questionData, initialTime = 15, onSubmit = () => { },
     useEffect(() => {
         setTimeLeft(initialTime)
         setStatsTimer(initialTime)
+        // Reset selection states for new question
+        setSelectedOption("")
+        setIsSubmitted(false)
+        setSubmissionStatus(null)
     }, [initialTime, questionData])
 
     useEffect(() => {
-        if (timeLeft > 0 ) {
+        if (timeLeft > 0) {
             const timer = setTimeout(() => {
                 setTimeLeft(timeLeft - 1)
             }, 1000)
