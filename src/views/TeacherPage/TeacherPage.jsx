@@ -2,6 +2,7 @@ import Header from "../../components/Header/Header"
 import Question from "../../components/Question/Question"
 import QuestionStats from "../../components/QuestionStats/QuestionStats"
 import ChatBox from "../../components/ChatBox/ChatBox"
+import PollHistory from "../../components/PollHistory/PollHistory"
 import "./TeacherPage.css"
 import { useEffect, useState } from "react"
 import { useSocket } from "../../lib/SocketContext"
@@ -13,6 +14,7 @@ const Teacher = () => {
     const [latestQuestionData, setLatestQuestionData] = useState(null);
     const [hasStarted, setHasStarted] = useState(false);
     const [isChatBoxOpen, setIsChatBoxOpen] = useState(false);
+    const [isPollHistoryOpen, setIsPollHistoryOpen] = useState(false);
     const [participants, setParticipants] = useState([]);
     useEffect(() => {
         if (!socket) return;
@@ -72,6 +74,15 @@ const Teacher = () => {
 
     return (
         <div className="teacher-page">
+            {/* View Poll History Button */}
+            <button
+                className="poll-history-button"
+                onClick={() => setIsPollHistoryOpen(true)}
+                title="View Poll History"
+            >
+                View Poll History
+            </button>
+
             <div className="teacher-container">
                 <div className="teacher-content">
                   {!hasStarted && !showStats && <Header />}
@@ -84,6 +95,11 @@ const Teacher = () => {
                 <ChatIcon />
             </button>
             {isChatBoxOpen && <ChatBox onClose={() => setIsChatBoxOpen(false)} participants={participants} />}
+            {/* Poll History Modal */}
+            <PollHistory
+                isOpen={isPollHistoryOpen}
+                onClose={() => setIsPollHistoryOpen(false)}
+            />
         </div>
     )
 }

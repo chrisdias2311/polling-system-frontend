@@ -1,25 +1,54 @@
 .teacher-page {
-  min-height: 100vh;
-  background: linear-gradient(135deg, #f3f4f6 0%, #e0e7ff 100%);
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f3f4f6 0%, #e0e7ff 100%);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+}
+
+.poll-history-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #7c3aed;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.poll-history-button:hover {
+    background: #6d28d9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.poll-history-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .teacher-container {
-  width: 100vw;
-  max-width: none;
-  margin: 0;
-  background: white;
-  border-radius: 0;
-  box-shadow: none;
-  /* padding: 40px 5vw 32px 5vw; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 32px;
-  min-height: 100vh;
-  height: 100vh;
+    width: 100vw;
+    max-width: none;
+    margin: 0;
+    background: white;
+    border-radius: 0;
+    box-shadow: none;
+    /* padding: 40px 5vw 32px 5vw; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    min-height: 100vh;
+    height: 100vh;
 }
 
 .starter-header {
